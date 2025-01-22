@@ -5,14 +5,12 @@ public class Favorite {
     private String restaurant;
     private String location;
 
-    // Constructor for new favorites (without id)
     public Favorite(String restaurant, String location) {
-        this.id = -1; // Default value for new favorites
+        this.id = -1;
         this.restaurant = restaurant;
         this.location = location;
     }
 
-    // Constructor for existing favorites (with id)
     public Favorite(int id, String restaurant, String location) {
         this.id = id;
         this.restaurant = restaurant;

@@ -8,7 +8,6 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -36,6 +35,10 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        app:menu="@menu/nav_menu" />
+        app:menu="@menu/nav_menu"
+        app:itemIconTint="@color/accentColor"
+        app:itemTextColor="@color/accentColor"
+        app:headerLayout="@layout/nav_header"
+        />
 
 </androidx.drawerlayout.widget.DrawerLayout>

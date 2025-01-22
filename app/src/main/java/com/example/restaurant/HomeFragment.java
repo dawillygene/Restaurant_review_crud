@@ -32,19 +32,26 @@ public class HomeFragment extends Fragment implements RestaurantAdapter.OnRestau
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
         dbHelper = new DatabaseHelper(getContext());
+
         restaurantList = new ArrayList<>();
-        restaurantList.add(new Restaurant("Msomawe", "Kijichi A"));
-        restaurantList.add(new Restaurant("kigali B", "Location B"));
-        restaurantList.add(new Restaurant("mchomo C", "Location C"));
-        restaurantList.add(new Restaurant("Domoco A", "Location A"));
-        restaurantList.add(new Restaurant("matwe B", "Location B"));
-        restaurantList.add(new Restaurant("nzonga C", "Location C"));
+        restaurantList.add(new Restaurant("The Rock Restaurant", "Zanzibar"));
+        restaurantList.add(new Restaurant("Slipway Restaurant", "Msasani Peninsula, Dar es Salaam"));
+        restaurantList.add(new Restaurant("Serengeti Coffee House", "Arusha"));
+        restaurantList.add(new Restaurant("Karafuu Restaurant", "Pemba Island"));
+        restaurantList.add(new Restaurant("Mamboz Corner BBQ", "Dar es Salaam"));
+        restaurantList.add(new Restaurant("Samaki Samaki", "Masaki, Dar es Salaam"));
+        restaurantList.add(new Restaurant("Zenji Cafe", "Stone Town, Zanzibar"));
+        restaurantList.add(new Restaurant("The Waterfront Sunset Restaurant", "Dar es Salaam"));
+        restaurantList.add(new Restaurant("Maembe Cafe", "Arusha"));
+        restaurantList.add(new Restaurant("Cholo Cafe", "Moshi"));
 
         adapter = new RestaurantAdapter(getContext(), restaurantList, this);
         recyclerView.setAdapter(adapter);
 
         return view;
     }
+
+
 
     @Override
     public void onReviewClick(Restaurant restaurant) {
@@ -54,20 +61,21 @@ public class HomeFragment extends Fragment implements RestaurantAdapter.OnRestau
         View dialogView = inflater.inflate(R.layout.dialog_submit_review, null);
         builder.setView(dialogView);
 
-
         TextView tvRestaurantName = dialogView.findViewById(R.id.tvRestaurantName);
         EditText etReviewText = dialogView.findViewById(R.id.etReviewText);
         RatingBar ratingBar = dialogView.findViewById(R.id.rating_bar);
         Button btnSubmitReview = dialogView.findViewById(R.id.btnSubmitReview);
 
-
         tvRestaurantName.setText(restaurant.getName());
+
         AlertDialog dialog = builder.create();
         btnSubmitReview.setOnClickListener(v -> {
             String reviewText = etReviewText.getText().toString();
             float rating = ratingBar.getRating();
             Review newReview = new Review(restaurant.getName(), reviewText, rating);
+
             dbHelper.addReview(newReview);
+
             Toast.makeText(getContext(), "Review submitted!", Toast.LENGTH_SHORT).show();
             dialog.dismiss();
         });

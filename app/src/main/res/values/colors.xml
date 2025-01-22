@@ -1,5 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Basic Colors -->
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!-- Primary Colors -->
+    <color name="primaryColor">#FF6200EE</color>
+    <color name="primaryLightColor">#FFBB86FC</color>
+    <color name="primaryDarkColor">#FF3700B3</color>
+
+    <!-- Secondary Colors -->
+    <color name="secondaryColor">#FF03DAC6</color>
+    <color name="secondaryLightColor">#FF66FFF9</color>
+    <color name="secondaryDarkColor">#FF00A896</color>
+
+    <!-- Background Colors -->
+    <color name="backgroundLight">#FFF5F5F5</color>
+    <color name="backgroundDark">#FF121212</color>
+
+    <!-- Surface Colors -->
+    <color name="surfaceLight">#FFFFFFFF</color>
+    <color name="surfaceDark">#FF1E1E1E</color>
+
+    <!-- Error Color -->
+    <color name="errorColor">#FFB00020</color>
+
+    <!-- Text Colors -->
+    <color name="textPrimaryLight">#DE000000</color>
+    <color name="textSecondaryLight">#8A000000</color>
+    <color name="textPrimaryDark">#FFFFFFFF</color>
+    <color name="textSecondaryDark">#B3FFFFFF</color>
+
+    <!-- Accent Colors -->
+    <color name="accentColor">#FF018786</color>
+    <color name="accentLightColor">#FF4EBAAA</color>
+    <color name="accentDarkColor">#FF00574B</color>
+
+    <!-- Additional Colors -->
+    <color name="dividerColor">#1F000000</color>
+    <color name="highlightColor">#1AFFFFFF</color>
 </resources>

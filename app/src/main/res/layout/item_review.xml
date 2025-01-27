@@ -9,7 +9,6 @@
     android:clickable="true"
     android:layout_margin="16dp">
 
-    <!-- Small Rounded Image in Upper-Right Corner -->
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/restaurant_image"
         android:layout_width="48dp"
@@ -22,25 +21,22 @@
     android:layout_alignParentEnd="true"
     />
 
-    <!-- Content Layout -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:paddingTop="8dp"> <!-- Adjust padding to avoid overlap with the image -->
+        android:paddingTop="8dp">
 
-        <!-- Restaurant Name -->
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/restaurant_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Restaurant Name"
-            android:textSize="18sp"
+            android:textSize="20sp"
             android:textStyle="bold"
             android:textColor="@color/accentDarkColor"
             android:paddingBottom="8dp" />
 
-        <!-- Review Text -->
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/review_text"
             android:layout_width="wrap_content"
@@ -50,7 +46,6 @@
             android:textColor="@color/accentDarkColor"
             android:paddingBottom="8dp" />
 
-        <!-- Rating -->
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/rating"
             android:layout_width="wrap_content"
@@ -60,14 +55,12 @@
             android:textColor="@color/accentDarkColor"
             android:paddingBottom="16dp" />
 
-        <!-- Action Buttons -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:paddingTop="8dp">
 
-            <!-- Edit Button -->
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/edit_button"
                 style="@style/Widget.MaterialComponents.Button.OutlinedButton"
@@ -82,7 +75,6 @@
                 app:strokeColor="@color/accentLightColor"
                 app:rippleColor="@color/accentDarkColor" />
 
-            <!-- Delete Button -->
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/delete_button"
                 style="@style/Widget.MaterialComponents.Button.OutlinedButton"

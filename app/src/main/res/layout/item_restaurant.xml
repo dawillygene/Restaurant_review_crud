@@ -9,7 +9,6 @@
     android:clickable="true"
     android:layout_margin="16dp">
 
-    <!-- Small Image in Upper-Right Corner -->
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/restaurant_image"
         android:layout_width="48dp"
@@ -22,19 +21,18 @@
     android:layout_alignParentEnd="true"
     app:shapeAppearanceOverlay="@style/CircleImageView" />
 
-    <!-- Content Layout -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:paddingTop="8dp"> <!-- Adjust padding to avoid overlap with the image -->
+        android:paddingTop="8dp">
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/restaurant_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Restaurant Name"
-            android:textSize="18sp"
+            android:textSize="20sp"
             android:textStyle="bold"
             android:textColor="@color/accentColor"
             android:paddingBottom="4dp" />

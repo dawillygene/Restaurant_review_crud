@@ -1,68 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
     android:padding="16dp"
-    android:background="@color/backgroundLight"
+    android:background="@drawable/border"
     android:focusable="true"
-    android:clickable="true">
+    android:clickable="true"
+    android:layout_margin="16dp">
 
+    <!-- Small Image in Upper-Right Corner -->
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/restaurant_image"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/food"
+    android:scaleType="centerCrop"
+    android:layout_margin="8dp"
+    android:contentDescription="Restaurant Image"
+    android:layout_alignParentTop="true"
+    android:layout_alignParentEnd="true"
+    app:shapeAppearanceOverlay="@style/CircleImageView" />
 
-<com.google.android.material.textview.MaterialTextView
-android:id="@+id/restaurant_name"
-android:layout_width="wrap_content"
-android:layout_height="wrap_content"
-android:text="Restaurant Name"
-android:textSize="18sp"
-android:textStyle="bold"
-android:textColor="@color/accentColor"
-android:paddingBottom="4dp" />
+    <!-- Content Layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="8dp"> <!-- Adjust padding to avoid overlap with the image -->
 
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/restaurant_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Restaurant Name"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/accentColor"
+            android:paddingBottom="4dp" />
 
-<com.google.android.material.textview.MaterialTextView
-android:id="@+id/restaurant_location"
-android:layout_width="wrap_content"
-android:layout_height="wrap_content"
-android:text="Location"
-android:textSize="14sp"
-android:textColor="@color/accentDarkColor"
-android:paddingBottom="16dp" />
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/restaurant_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Location"
+            android:textSize="14sp"
+            android:textColor="@color/accentDarkColor"
+            android:paddingBottom="16dp" />
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="8dp">
 
-<LinearLayout
-android:layout_width="match_parent"
-android:layout_height="wrap_content"
-android:orientation="horizontal"
-android:paddingTop="8dp">
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_review"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Review"
+                android:textColor="@color/accentColor"
+                android:iconTint="@color/accentDarkColor"
+                android:layout_marginEnd="4dp"
+                app:strokeColor="@color/accentDarkColor"
+                app:rippleColor="@color/accentLightColor" />
 
-
-<com.google.android.material.button.MaterialButton
-    android:id="@+id/btn_review"
-    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-    android:layout_width="0dp"
-    android:layout_height="wrap_content"
-    android:layout_weight="1"
-    android:text="Review"
-    android:textColor="@color/accentColor"
-android:iconTint="@color/accentDarkColor"
-android:layout_marginEnd="4dp"
-app:strokeColor="@color/accentDarkColor"
-app:rippleColor="@color/accentLightColor" />
-
-
-<com.google.android.material.button.MaterialButton
-    android:id="@+id/btn_favorite"
-    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-    android:layout_width="0dp"
-    android:layout_height="wrap_content"
-    android:layout_weight="1"
-    android:text="Favorite"
-    android:textColor="@color/accentColor"
-android:iconTint="@color/accentDarkColor"
-android:layout_marginStart="4dp"
-app:strokeColor="@color/accentDarkColor"
-app:rippleColor="@color/accentDarkColor" />
-</LinearLayout>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_favorite"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Favorite"
+                android:textColor="@color/accentColor"
+                android:iconTint="@color/accentDarkColor"
+                android:layout_marginStart="4dp"
+                app:strokeColor="@color/accentDarkColor"
+                app:rippleColor="@color/accentDarkColor" />
+        </LinearLayout>
     </LinearLayout>
+</RelativeLayout>
